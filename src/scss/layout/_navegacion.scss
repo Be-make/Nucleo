@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion-principal {
+    display: inline;
+    padding: 2rem 0;
+    @include m.tablet {
+        margin-top: 0;
+    }
+    @include m.tablet {
+        margin: 0;
+    }
+    a {
+        margin-right: 2rem;
+        padding: 1rem;
+        color: v.$negro;
+        font-family:v.$fuenteHeading ;
+        transition: color 0.5s ease;
+        &:hover {
+            color: v.$azul;
+        }
+    }
+}

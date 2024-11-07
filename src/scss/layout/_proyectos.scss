@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.proyectos {
+    margin: 3rem 0 10rem 0;
+    .proyectos-grid {
+        @include m.grid(2,);
+        @include m.tablet {
+            @include m.grid(3);
+        }
+        @include m.tablet {
+            @include m.grid(4);
+        };
+    };
+};
+.proyecto {
+    &__imagen-bienesraices {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 1rem 1rem;
+        background-image: url('../../../build/image/bienesraices.avif');
+        background-size: cover;
+        background-position: center center;
+        height: 10rem;
+        border-radius: 1rem;
+        @include m.desktop {
+            height: 20rem;
+        }
+        h3 {
+            margin: 0;
+            color: v.$blanco;
+        };
+    };
+    &__imagen-festival {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 1rem 1rem;
+        background-image: linear-gradient( rgba( 5, 7, 12, 0.50 ), rgba( 5, 7, 12, 0.70 ) ), url('../../../build/image/festival.avif');
+        background-size: cover;
+        background-position: center center;
+        height: 10rem;
+        border-radius: 1rem;
+        @include m.desktop {
+            height: 20rem;
+        }
+        h3 {
+            margin: 0;
+            color: v.$blanco;
+        };
+    };
+    &__imagen-muebles {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 1rem 1rem;
+        background-image: linear-gradient( rgba( 5, 7, 12, 0.50 ), rgba( 5, 7, 12, 0.70 ) ), url('../../../build/image/muebles.avif') ;
+        background-size: cover;
+        background-position: center center;
+        height: 10rem;
+        border-radius: 1rem;
+        @include m.desktop {
+            height: 20rem;
+        }
+        h3 {
+            margin: 0;
+            color: v.$blanco;
+        };
+    };
+    &__imagen-jardin {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 1rem 1rem;
+        background-image: linear-gradient( rgba( 5, 7, 12, 0.50 ), rgba( 5, 7, 12, 0.70 ) ), url('../../../build/image/jardin.avif');
+        background-size: cover;
+        background-position: center center;
+        height: 10rem;
+        border-radius: 1rem;
+        @include m.desktop {
+            height: 20rem;
+        }
+        h3 {
+            margin: 0;
+            color: v.$blanco;
+        };
+    };
+};

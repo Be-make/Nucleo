@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    .barra {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        @include m.tablet {
+            flex-direction: row;
+        };
+    };
+};
+.redes-sociales {
+    background-color: v.$negro;
+    padding: .5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    &__flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

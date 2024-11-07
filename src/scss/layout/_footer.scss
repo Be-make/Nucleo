@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.site-footer {
+    transition: all 0.25s ease-in;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: -100%;
+    background-color: v.$negro;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    p {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 1rem;
+        color: v.$blanco;
+        @include m.tablet {
+            font-size: 2rem;
+        };
+    };
+    h3 {
+        font-size: 1.5rem;
+        margin: 0;
+        color: v.$blanco;
+        @include m.tablet {
+            font-size: 3rem;
+        };
+    };
+    .grid-footer {
+        display: flex;
+        gap: 2rem;
+    };
+    .grid-footer div {
+        flex: 1;
+    };
+    
+};
+.footer-menu a {
+    display: block;
+    color: v.$blanco;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: v.$fuentePrincipal;
+    transition: color .2s ease,
+                font-weight .2s ease;
+    &:hover {
+        color: v.$grisClaro;
+        font-weight: bold;
+    };
+    @include m.tablet {
+        font-size: 1.8rem;
+    };
+};
+.activo {
+    bottom: 0;
+}
